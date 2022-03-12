@@ -22,7 +22,9 @@ const LoginPage = () => {
 
     dispatch(action);
     
-    navigate('/marvel' , { 
+    const lastpath = JSON.parse(localStorage.getItem('lastpath'));
+
+    navigate(lastpath, { 
       replace: true
     })
   }

@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+const heroImages = require.context('../../assets/heroes')
 
 const HeroCard = ({
     id,
@@ -15,7 +16,7 @@ const HeroCard = ({
             <div className="card">
                 <div className="row no-gutters animate__animated animate__fadeInUp ">
                    <div className="col-4">
-                        <img src={`/assets/heroes/${id}.jpg`} className="card-img" alt={superhero} />
+                        <img src={heroImages(`./${id}.jpg`)} className="card-img" alt={superhero} />
                    </div>
                    <div className="col-8 card-body"> 
                         <h5 className="card-title">{superhero}</h5>
